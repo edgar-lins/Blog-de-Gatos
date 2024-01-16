@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --hue: 240;
+    --color-base-gray-white: #FFFFFF;
+    --color-base-blue-dark: hsl(195, 91%, 25%);
+    --color-base-blue-light: hsla(0, 0%, 100%, 0.2);
+    --color-base-black-400: hsl(var(--hue), 5%, 7%);
+    --color-base-black-700: hsl(var(--hue), 6%, 13%);
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+header, footer {
+    background-color: var(--color-base-blue-dark);
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    width: min(112rem, 100%);
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    overflow-y: scroll;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+.logo {
+    background-color: var(--color-base-gray-white);
+    padding: .8rem;
+    border-radius: 50%;
+}
+
+header form {
+    flex: 1;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem;
+    background-color: var(--color-base-blue-light);
+
+    border: none;
+    border-radius: .4rem;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    opacity: 0.8;
+
+    color: var(--color-base-gray-white);;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-base-gray-white);
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.6rem;
+    color: var(--color-base-gray-white);
+    font-weight: 600;
+}
+
+.description,
+.articles {
+    width: 43.4rem;
+    margin: 0 auto;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.main-photo {
+    border-radius: .5rem;
+    margin-bottom: 2.8rem;
+}
+
+.description h1,
+.articles h1 {
+    color: var(--color-base-black-700);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 160%;
+
+    margin-bottom: .8rem;
+}
+
+.button {
+    background-color: var(--color-base-blue-dark);
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.text-icon {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3.1rem;
+}
+
+.description p {
+    color: var(--color-base-black-400);
+    font-size: 1.6rem;
+    line-height: 160%;
+}
+
+.description h1,
+.text-icon, 
+.description p,
+.articles h1,
+.card {
+    padding: 0 2.4rem;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    margin-bottom: 3.9rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.card img {
+    width: 15rem;
+    height: 8.4rem;
+    object-fit: cover;
+}
+
+.card h2 {
+    color: var(--color-base-black-700);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.card p {
+    color: var(--color-base-black-400);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%; 
+}
+
+@media (min-width: 770px) {
+    main {
+        flex-direction: row;
+
+        justify-content: center;
+        padding: 4.4rem;
+    }
+
+    .description {
+        width: 80rem;
+        margin: 0;
+    }
+
+    .articles {
+        margin: 0;
+    }
+
+    .main-photo {
+        min-width: 100%;
+    }
+
+    .description h1,
+    .text-icon, 
+    .description p,
+    .articles h1,
+    .card {
+        padding: 0;
+    }
+
+    .card {
+        min-width: 38rem;
+    }
+
+    .description p {
+        padding-bottom: 3.9rem;
+    }
+}
+
